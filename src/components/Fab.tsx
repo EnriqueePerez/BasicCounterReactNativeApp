@@ -2,15 +2,16 @@ import React from 'react';
 import { TouchableOpacity, View, Text, StyleSheet } from 'react-native';
 
 //creating an inteface to props to auto document the new component
+//the functions should be at the end of the interface
 interface Props {
   title: string;
+  position?: 'bottomRight' | 'bottomLeft';
+  onPress: () => void;
 }
 
-export const Fab = ({ title }: Props) => {
+export const Fab = ({ title, onPress }: Props) => {
   return (
-    <TouchableOpacity
-      style={styles.fabLocationBR}
-      onPress={() => setCounter(counter + 1)}>
+    <TouchableOpacity style={styles.fabLocationBR} onPress={onPress}>
       <View style={styles.fab}>
         <Text style={styles.fabText}>{title}</Text>
       </View>

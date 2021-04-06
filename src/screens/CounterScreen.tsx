@@ -9,7 +9,13 @@ export const CounterScreen = () => {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Contador: {counter}</Text>
-      <Fab title="+1" />
+      <Fab title="+1" onPress={() => setCounter(counter + 1)} />
+      <Fab
+        title="-1"
+        position="bottomLeft"
+        onPress={() => setCounter(counter - 1)}
+      />
+
       {/* <TouchableOpacity
         style={styles.fabLocationBL}
         onPress={() => setCounter(counter - 1)}>
