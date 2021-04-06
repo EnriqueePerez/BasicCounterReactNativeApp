@@ -1,6 +1,6 @@
 /* eslint-disable react-native/no-inline-styles */
 import React, {useState} from 'react';
-import {Button, Text, View} from 'react-native';
+import {Text, TouchableOpacity, View} from 'react-native';
 
 export const CounterScreen = () => {
   const [counter, setCounter] = useState(10);
@@ -10,7 +10,11 @@ export const CounterScreen = () => {
       <Text style={{textAlign: 'center', fontSize: 40, top: -15}}>
         Contador: {counter}
       </Text>
-      <Button title="Click" onPress={() => setCounter(counter + 1)} />
+      <TouchableOpacity onPress={() => setCounter(counter + 1)}>
+        <View style={{backgroundColor: 'red', borderRadius: 100}}>
+          <Text>Click me!!</Text>
+        </View>
+      </TouchableOpacity>
     </View>
   );
 };
