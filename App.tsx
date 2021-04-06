@@ -1,5 +1,5 @@
 import React from 'react';
-import {CounterScreen} from './src/screens/CounterScreen';
+import { CounterScreen } from './src/screens/CounterScreen';
 
 const App = () => {
   // return <HelloWorldScreen />;
