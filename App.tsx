@@ -1,6 +1,6 @@
 import React from 'react';
 import { SafeAreaView } from 'react-native';
-import { DimensionsScreen } from './src/screens/DimensionsScreen';
+import { PositionScreen } from './src/screens/PositionScreen';
 
 const App = () => {
   return (
@@ -8,7 +8,8 @@ const App = () => {
       {/* <HelloWorldScreen />
      <CounterScreen /> */}
       {/* <BoxObjectModelScreen /> */}
-      <DimensionsScreen />
+      {/* <DimensionsScreen /> */}
+      <PositionScreen />
     </SafeAreaView>
   );
 };
